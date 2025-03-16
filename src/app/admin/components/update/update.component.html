@@ -1,0 +1,35 @@
+<div>
+    <div>
+        <form (ngSubmit)="onSubmit(form)" #form="ngForm">
+            <div>
+                <label for="name">Movie Name</label>
+                <input type="text" id="name" [(ngModel)]="movie.name" name="name" required>
+            </div>
+            <div>
+                <label for="ticketprice">Price</label>
+                <input type="text" id="ticketprice" ngModel name="ticketprice" required>
+            </div>
+            <div>
+                <label for="genre">Genre</label>
+                <input type="text" id="genre" ngModel name="genre" required>
+            </div>
+            <div>
+                <label for="synopsis">Synopsis</label>
+                <input type="text" id="synopsis" ngModel name="synopsis" required>
+            </div>
+            <div>
+                <label for="poster">Poster's url</label>
+                <input type="text" id="poster" ngModel name="poster" required>
+            </div>
+            <div>
+                <label for="showtime">Showtime</label>
+                <input type="text" id="showtime" ngModel name="showtime" required>
+            </div>
+            <div>
+                <button type="submit">Save</button>
+                <button (click)="onCancel()">Cancel</button>
+            </div>
+
+        </form>
+    </div>
+</div>

@@ -1,0 +1,97 @@
+body {
+  margin: 60px;
+  background: #111;
+}
+
+.screen {
+  width: 500px; /* Adjust width as needed */
+  height: 200px; /* Adjust height as needed */
+  background-color: #333; /* Dark color for cinema screen */
+  margin: 0 auto; /* Center the screen horizontally */
+  border-radius: 10px; /* Rounded corners for the screen */
+  position: relative; /* Position relative to allow absolute positioning of content */
+}
+
+.screen:before {
+  content: "Cinema Screen"; /* Content to display on the screen */
+  color: #fff; /* Text color */
+  font-size: 24px; /* Adjust font size as needed */
+  position: absolute; /* Position absolute to place content inside the screen */
+  top: 50%; /* Position vertically centered */
+  left: 50%; /* Position horizontally centered */
+  transform: translate(-50%, -50%); /* Center the content */
+}
+
+
+.theatre {
+  display: flex;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.cinema-seats {
+  display: flex;
+}
+
+.seat {
+  cursor: pointer;
+  position: relative;
+}
+
+.seat:hover:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 7px;
+}
+
+.seat.active:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 7px;
+}
+
+.left .cinema-row {
+  transform: skew(-15deg);
+  margin: 0 6px;
+}
+
+.left .seat {
+  width: 35px;
+  height: 50px;
+  border-radius: 7px;
+  background: linear-gradient(to top, #761818, #761818, #761818, #761818, #761818, #B54041,  #F3686A);
+  margin-bottom: 10px;
+  transform: skew(20deg);
+  margin-top: -32px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5)
+}
+
+.right {
+  margin-left: 70px;
+}
+
+.right .cinema-row {
+  transform: skew(7deg);
+  margin: 0 6px;
+}
+
+.right .seat {
+  width: 35px;
+  height: 50px;
+  border-radius: 7px;
+  background: linear-gradient(to top, #761818, #761818, #761818, #761818, #761818, #B54041,  #F3686A);
+  margin-bottom: 10px;
+  transform: skew(-8deg);
+  margin-top: -32px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5)
+}

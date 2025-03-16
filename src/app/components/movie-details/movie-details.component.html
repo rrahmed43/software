@@ -1,0 +1,77 @@
+
+<!-- <div>
+    <div> -->
+        <!-- <img src={{movie.poster}} [routerLink]="['/update',movie.id]"> -->
+        <!-- <img src={{movie.poster}} [routerLink]="['/movie-details',movie.id]"> -->
+        <!-- <img [src]="movie.poster">
+        <h3>{{movie.name |titlecase}}</h3>
+        <h5>{{movie.synopsis|titlecase}}</h5> 
+        <h5>{{movie.cast|titlecase}}</h5>
+        <h5>{{movie.writers|titlecase}}</h5>
+        <h5>{{movie.director|titlecase}}</h5>
+        <h5>{{movie.releasedate}}</h5>
+        <h5>{{movie.language|titlecase}}</h5>
+        <h5>{{movie.genre|titlecase}}</h5>
+        <h5><button class="ticket" routerLinkActive="active"><a routerLink="/movie-seat-booking"(click)="onShowTimeClick(movie.id)">{{movie.showtime1}}</a></button></h5>
+        <h5><button class="ticket" routerLinkActive="active"><a routerLink="/movie-seat-booking"(click)="onShowTimeClick(movie.id)">{{movie.showtime2}}</a></button></h5>  -->
+        <!-- <iframe width="420" height="315" [src]="movie.trailer"></iframe> -->
+
+    <!-- </div>
+</div> -->
+
+
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<div class="movie-ticket">
+  <div class="container-fluid">
+    <!-- Item -->
+    <div class="ui-item">
+      <!-- Head -->
+      <div class="ui-head">
+        <!-- Background Image -->
+        <img src="https://media.istockphoto.com/id/1542598409/photo/movie-podium-background-with-movie-objects-3d-rendering.jpg?s=612x612&w=0&k=20&c=taQFeF3vasOm9kUjATv9sWSIt0GiFfRLeib-mOJ58fs=" alt="" class="img-responsive bg-img">
+        <!-- Transparent Background -->
+        <div class="ui-trans clearfix">
+          <!-- Image -->
+          <img [src]="movie.poster" alt="" class="img-responsive">
+          <!-- Details -->
+          <div class="ui-details clearfix">
+            <!-- Movie Name -->
+            <h2>{{movie.name |titlecase}}</h2>
+            <!-- Labels -->
+            <a class="label">190 min</a>
+            <a  class="label">{{movie.releasedate}}</a>
+            <a  class="label">{{movie.genre|titlecase}}</a>
+            <a  class="label">{{movie.language|titlecase}}</a>
+            <!-- Paragraph -->
+            <p>{{movie.synopsis|titlecase}}</p>
+            <!-- Heading -->
+            <h4><span>Director</span>:</h4>
+            <!-- Director Name -->
+            <h5><a href="#">{{movie.director|titlecase}}</a></h5>
+            <!-- Heading -->
+            <h4><span>Writers</span>:</h4>
+            <!-- Writers -->
+            <h5><a href="#"> {{movie.writers|titlecase}}</a></h5>
+            <!-- Heading -->
+            <h4><span>Stars</span>:</h4>
+            <!-- Stars -->
+            <h5><a href="#">{{movie.cast|titlecase}}</a></h5>
+          </div>
+        </div>
+      </div>
+        <!-- Review -->
+        <div class="ui-review">
+          <!-- Heading -->
+          <h3>Synopsis</h3>
+          <!-- Paragraph -->
+          <p>{{movie.synopsis|titlecase}}</p>
+          <!-- Buttons -->
+          <!-- <h5><button class="ticket" routerLinkActive="active"><a routerLink="/movie-seat-booking"(click)="onShowTimeClick(movie.id)">{{movie.showtime2}}</a></button></h5>
+          <h5><button class="ticket" routerLinkActive="active"><a routerLink="/movie-seat-booking"(click)="onShowTimeClick(movie.id)">{{movie.showtime1}}</a></button></h5> -->
+          <a routerLink="/movie-seat-booking"(click)="onShowTimeClick(movie.id)" class="ui-btn bg-red"><i class="fa fa-ticket"></i> {{movie.showtime1}}</a>
+          <a routerLink="/movie-seat-booking"(click)="onShowTimeClick(movie.id)" class="ui-btn bg-red"><i class="fa fa-ticket"></i> {{movie.showtime2}}</a>
+          <a  href="{{movie.trailer}}" class="ui-btn bg-green"><i class="fa fa-dot-circle-o"></i>Trailer</a>
+        </div>
+      </div>  
+    </div>
+</div>                           

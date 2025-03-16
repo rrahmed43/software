@@ -1,0 +1,20 @@
+<div>
+    <button routerLink="/add">Add movie</button>
+    <div>
+        <a *ngFor="let movie of movies;" routerLinkActive="active">
+            <div>
+                <img src={{movie.poster}} >
+                <h3>{{movie.name}}</h3>
+                <h5>{{movie.ticketprice}}</h5>
+                <h5>{{movie.synopsis}}</h5>
+                <h5>{{movie.showtime1}}</h5>
+                <h5>{{movie.genre}}</h5>
+            </div>
+            <div>
+                <button [routerLink]="['/update',movie.id]">Update Movie</button>
+                <button (click)="Delete(movie)">Delete Movie</button>
+            </div>
+
+        </a>
+    </div>
+</div>

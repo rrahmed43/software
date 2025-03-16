@@ -1,0 +1,90 @@
+<!-- <div><button routerLink="/add">Add movie</button></div> -->
+<!-- <div>
+    
+    <div>
+        <a *ngFor="let movie of movies;" routerLinkActive="active">
+            <div>
+                <img src={{movie.poster}} [routerLink]="['/update',movie.id]">
+                <img src={{movie.poster}} [routerLink]="['/movie-details',movie.id]">
+                 <h3>{{movie.name}}</h3>
+                 <h5>{{movie.ticketprice}}</h5> 
+                 <h5>{{movie.synopsis}}</h5> 
+                 <h5><button>{{movie.showtime1}}</button></h5>
+                 <h5><button>{{movie.showtime2}}</button></h5> 
+                 <<h5>{{movie.genre}}</h5> 
+            </div>
+            <div>
+                <button class="btn btn-outline-primary" routerLinkActive="active"><a routerLink="/movie-details">Book Now</a></button>
+            </div>
+            <div>
+                <button>Update Movie</button>
+                <button>Delete Movie</button>
+            </div>
+
+        </a>
+    </div>
+</div> -->
+
+<!-- <div *ngFor="let movie of movies">
+    <div> -->
+      <!-- Link the image to the movie-details component with movie ID as route parameter -->
+      <!-- <a [routerLink]="['/update', movie.id]">
+        <img [src]="movie.poster" alt="{{ movie.name }}">
+      </a>
+      <h3>{{ movie.name }}</h3>
+    </div>
+    <div>
+      <button class="btn btn-outline-primary" (click)="onBookButtonClick(movie.id)">Book Now</button>
+    </div>
+  </div> -->
+  
+
+<!-- <div class="body">
+  <div class="row">
+    <div class="col col-12 col-md-6 col-lg-3" *ngFor="let movie of movies">
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top" [src]="movie.poster" >
+        <div class="card-body">
+          <h5 class="card-title">{{ movie.name | titlecase}}</h5> | this sign for title case to make every letter from the word of the name in uppercase 
+          <p class="card-text">{{movie.genre | titlecase}}</p>
+          <button class="btn btn-outline-primary" (click)="onBookButtonClick(movie.id)">Book Now</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>   -->
+
+
+
+<!-- <div class="body">
+  <div class="row">
+    <div class="col col-12 col-md-6 col-lg-3" *ngFor="let movie of movies">
+      <div class="card" style="width: 18rem;">
+        <div class="poster-container">
+          <img class="card-img-top" [src]="movie.poster" >
+          <div class="overlay">
+            <div class="content">
+              <h5 class="card-title">{{ movie.name | titlecase}}</h5>
+              <p class="card-text">{{movie.genre | titlecase}}</p>
+              <button class="btn btn-outline-primary" (click)="onBookButtonClick(movie.id)">Book Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+
+<div class="container d-flex align-items-center justify-content-center position-relative flex-wrap">
+  <div class="card d-flex position-relative flex-column" *ngFor="let movie of movies">
+      <div class='imgContainer'>
+          <img [src]="movie.poster">
+      </div>
+      <div class="content">
+          <h2>{{ movie.name | titlecase}}</h2>
+          <p>{{movie.genre | titlecase}}</p>
+          <button class="btn btn-outline-primary" (click)="onBookButtonClick(movie.id)">Book Now</button>
+      </div>
+  </div>
+</div>

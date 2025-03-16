@@ -1,0 +1,6 @@
+button a {
+    text-decoration: none; /* Removes underline */
+    color: inherit;  /*Inherits the color from the button */
+  }
+
+  
